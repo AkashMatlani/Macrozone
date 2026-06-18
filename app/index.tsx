@@ -1,15 +1,12 @@
+import { globalStyles } from "@/assets/styles/global.styles";
 import { Text, View } from "react-native";
+import HomeHeader from "./component/HomeHeader";
 
-export default function Index() {
+export default function HomeScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.title}>MacroZone</Text>
+      <HomeHeader />
     </View>
-  );
+  )
 }
