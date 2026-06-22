@@ -14,7 +14,6 @@ export default function MacroGird() {
 }
 
 const styles = StyleSheet.create({
-
     grid: {
         flexDirection: 'row',
         flexWrap: 'wrap',

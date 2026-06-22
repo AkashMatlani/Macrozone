@@ -33,4 +33,11 @@ export const globalStyles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 30,
   },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: colors.textSecondary,
+    marginBottom: 16,
+    marginTop: 30,
+  },
 });
