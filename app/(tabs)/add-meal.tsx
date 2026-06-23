@@ -1,6 +1,8 @@
 import { colors, globalStyles } from '@/assets/styles/global.styles';
+import { router } from 'expo-router';
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { addMeal } from '../storage/meals';
 
 export default function AddMeal() {
     const [name, setName] = useState("");
@@ -10,8 +12,29 @@ export default function AddMeal() {
     const [fat, setFat] = useState("");
 
 
-    const handleAddMeal = () => {
+    const handleAddMeal = async () => {
+        if (!name || !calories) {
+            Alert.alert("Error", "Please enter a meal name and calories.");
+            return;
+        }
 
+        await addMeal({
+            name,
+            calories: Number(calories),
+            protein: Number(protin) || 0,
+            carbs: Number(carbs) || 0,
+            fat: Number(fat) || 0,
+        });
+
+        setName('');
+        setCalories('');
+        setProtin('');
+        setCarbs('');
+        setFat('');
+
+        Alert.alert("Success", "Meal added successfully!");
+
+        router.push('/');
     }
 
     return (
@@ -58,7 +81,7 @@ export default function AddMeal() {
                     onChangeText={setFat} />
             </View>
 
-            <TouchableOpacity onPress={() => handleAddMeal}
+            <TouchableOpacity onPress={handleAddMeal}
                 style={styles.button}>
                 <Text style={styles.buttonText}>Add Meal</Text>
             </TouchableOpacity>
@@ -94,5 +117,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
     }
-
 })
