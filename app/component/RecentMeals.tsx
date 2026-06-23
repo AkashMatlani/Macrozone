@@ -1,7 +1,7 @@
 import { globalStyles } from '@/assets/styles/global.styles'
 import React from 'react'
 import { Text, View } from 'react-native'
-import MealItem from './Mealitem'
+import MealItem from '../component/MealItem'
 
 export default function RecentMeals() {
   return (

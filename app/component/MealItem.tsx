@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     },
     macros: {
         fontSize: 13,
-        color: "#a0a0bo",
+        color: "#a0a0b0",
         marginTop: 4,
     }
 });
