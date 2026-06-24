@@ -17,7 +17,7 @@ export default function MacroCard({
         <View style={[style.card, { borderLeftColor: color }]}>
             <Text style={style.label}>{label}</Text>
             <Text style={style.value}>{value}</Text>
-            <Text style={style.goal}>{goal}</Text>
+            <Text style={style.goal}>/ {goal}</Text>
         </View>
 
     );

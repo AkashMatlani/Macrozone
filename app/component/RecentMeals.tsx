@@ -4,7 +4,6 @@ import { Text, View } from 'react-native'
 import MealItem from '../component/MealItem'
 import { Meal } from '../storage/meals'
 
-
 type RecentMealProps = {
   meals: Meal[];
 }
