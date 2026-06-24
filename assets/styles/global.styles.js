@@ -40,4 +40,8 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 16,
     marginTop: 30,
   },
+  empty: {
+    color: colors.textSecondary,
+    fontSize: 14,
+  },
 });
