@@ -1,25 +1,48 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { deleteMeal } from '../storage/meals';
 
 type MealItemProps = {
+    id: string
     name: string,
     calories: number,
     protein: number,
     crabs: number,
     fat: number,
+    onDelete: () => void
 }
 export default function MealItem({
+    id,
     name,
     calories,
     protein,
     crabs,
-    fat
+    fat,
+    onDelete
 }: MealItemProps) {
+
+    const handleLongPress = () => {
+        Alert.alert("Delete Meal", `Are you sure you want to delete "${name}"?`,
+            [
+                {
+                    text: 'Cancel',
+                    style: 'cancel'
+                },
+                {
+                    text: 'Delete',
+                    style: 'destructive',
+                    onPress: async () => {
+                    await deleteMeal(id)
+                    onDelete();
+                 }
+                }
+            ]);
+    }
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} onLongPress={handleLongPress}>
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.macros}>{calories} cal.{protein}g p.{crabs}g C.{fat}g F</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

@@ -8,9 +8,7 @@ import RecentMeals from "../component/RecentMeals";
 import { getMeals, Meal } from "../storage/meals";
 
 export default function HomeScreen() {
-
   const [meals, setMeals] = useState<Meal[]>([]);
-
 
   const loadMeals = async () => {
     const data = await getMeals();
@@ -27,7 +25,7 @@ export default function HomeScreen() {
       <Text style={globalStyles.title}>MacroZone</Text>
       <HomeHeader />
       <MacroGird  meals={meals} />
-      <RecentMeals meals={meals} />
+      <RecentMeals meals={meals}  onDelete={loadMeals}/>
     </ScrollView>
   );
 }
