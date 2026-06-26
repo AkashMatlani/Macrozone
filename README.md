@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+# MacroZone - React Native Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MacroZone is a simple mobile app built with React Native and Expo that helps users keep track of their daily nutrition. You can add meals, monitor your calorie intake, and see your daily protein, carbs, and fat totals in one place. This project was created while following the React Native Crash Course by Traversy Media, with some personal improvements and practice along the way.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Add meals with calories, protein, carbs, and fat
+- Track your daily nutrition summary
+- View all meals or only your recent entries
+- Share or copy meal information
+- Haptic feedback for a better user experience
+- Daily reminder notifications (iOS)
+- Save data locally using AsyncStorage
+- Clean and responsive interface with tab navigation
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- AsyncStorage
+- Expo Notifications
+- Expo Haptics
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+### Prerequisites
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Before running the project, make sure you have:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js (LTS version)
+- Expo Go app on your mobile device or an Android/iOS emulator
 
-## Get a fresh project
-
-When you're ready, run:
+### Installation
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/macrozone.git
+cd macrozone
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Run the Project
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+After the development server starts, scan the QR code using Expo Go on your phone or launch the app in an emulator.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## License
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is open-source and available under the MIT License.
