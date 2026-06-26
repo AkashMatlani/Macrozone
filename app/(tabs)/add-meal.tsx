@@ -12,7 +12,6 @@ export default function AddMeal() {
     const [carbs, setCarbs] = useState("");
     const [fat, setFat] = useState("");
 
-
     const handleAddMeal = async () => {
         if (!name || !calories) {
             Alert.alert("Error", "Please enter a meal name and calories.");

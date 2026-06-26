@@ -1,10 +1,10 @@
 # MacroZone - React Native Application
 
-MacroZone is a simple mobile app built with React Native and Expo that helps users keep track of their daily nutrition. You can add meals, monitor your calorie intake, and see your daily protein, carbs, and fat totals in one place. This project was created while following the React Native Crash Course by Traversy Media, with some personal improvements and practice along the way.
+MacroZone is a simple mobile app built with React Native and Expo that helps users keep track of their daily nutrition. You can add meals, monitor your calorie intake, and see your daily protein, carbs, and fat totals in one place.
 
 ## Features
 
-- Add meals with calories, protein, carbs, and fat
+- Add meals with calories, protein, carbs and fat
 - Track your daily nutrition summary
 - View all meals or only your recent entries
 - Share or copy meal information
