@@ -35,7 +35,7 @@ Before running the project, make sure you have:
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/macrozone.git
+git clone https://github.com/AkashMatlani/Macrozone.git
 cd macrozone
 npm install
 ```
