@@ -1,4 +1,5 @@
 import { colors, globalStyles } from '@/assets/styles/global.styles';
+import * as Haptics from 'expo-haptics';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
@@ -33,7 +34,7 @@ export default function AddMeal() {
         setFat('');
 
         Alert.alert("Success", "Meal added successfully!");
-
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         router.push('/');
     }
 
