@@ -2,6 +2,7 @@ import { globalStyles } from "@/assets/styles/global.styles";
 import { useFocusEffect } from "expo-router";
 import { useCallback, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
+import CopyButton from "../component/CopyButton";
 import HomeHeader from "../component/HomeHeader";
 import MacroGird from "../component/MacroGird";
 import RecentMeals from "../component/RecentMeals";
@@ -29,6 +30,7 @@ export default function HomeScreen() {
       </View>
       <HomeHeader />
       <MacroGird meals={meals} />
+      <CopyButton meals={meals} />
       <RecentMeals meals={meals} onDelete={loadMeals} />
     </ScrollView>
   );
